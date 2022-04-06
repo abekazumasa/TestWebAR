@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker type='pattern' url='./Marker/TestMarker.patt'>
-        <a-box position="0 -1 0" scale="1 1 1" color="grey"></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewprt" content="width=deviece-width,intial-scale=1">
+        <title>TestAR</title>
+    </head>
+    <body style="margin:0px; overflow:hidden;">
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <a-scene embedded arjs="debugUIEnabled:false;">
+            <a-marker type='pattern' url='./Marker/pattern-TestQRcode.patt'>
+                <a-sphere scale="0.25 0.25 0.25" position="0 0.5 0" color="#f00">
+                </a-sphere>
+            </a-marker>
+        </a-scene>
+    </body>
 </html>
